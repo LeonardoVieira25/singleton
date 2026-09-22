@@ -1,9 +1,11 @@
-import aprovacao.Aluno;
 
 public class Main {
     public static void main(String[] args) {
-        Aluno aluno = new Aluno();
-        aluno.setFrequencia(10);
-        System.out.println("Frequência: " + aluno.getFrequencia());
+        AppConfig appConfig = AppConfig.getInstance();
+        appConfig.setApiUrl("https://api.example.com");
+        appConfig.setApiKey("my-api-key");
+
+        System.out.println("API URL: " + appConfig.getApiUrl());
+        System.out.println("API Key: " + appConfig.getApiKey());
     }
 }
